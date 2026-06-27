@@ -180,17 +180,11 @@ const handleDelete = (row) => {
 };
 
 // 切换推荐状态
+// 切换推荐状态
 const handleRecommendChange = async (row) => {
     try {
-        await request.put(`/article/${row.id}`, {
-            title: row.title,
-            description: row.description || '',
-            content: row.content || '',
-            cover: row.cover || '',
-            category_id: row.category_id,
-            status: row.status,
-            is_recommend: row.is_recommend,
-            tagIds: []
+        await request.put(`/article/${row.id}/recommend`, {
+            is_recommend: row.is_recommend
         });
         ElMessage.success(row.is_recommend ? '已设为推荐' : '已取消推荐');
     } catch (error) {

@@ -2,7 +2,7 @@
     <el-container class="layout-container">
         <el-aside width="220px" class="layout-aside">
             <div class="logo">
-                <h2>博客系统后台</h2>
+                <h2>系统后台</h2>
             </div>
             <el-menu :default-active="route.path" router background-color="#304156" text-color="#bfcbd9"
                 active-text-color="#409EFF">

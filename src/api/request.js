@@ -3,8 +3,8 @@ import { ElMessage } from "element-plus";
 
 // 创建 Axios 实例
 const service = axios.create({
-  baseURL: "http://localhost:3001/api", // 对应我们的 blog-server 地址
-  timeout: 5000, // 超时时间
+  baseURL: import.meta.env.VITE_API_BASE_URL,
+  timeout: 5000,
 });
 
 // 1. 请求拦截器：在发送请求前做点什么
